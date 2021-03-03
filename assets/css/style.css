@@ -1,0 +1,83 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-weight: bold;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card:nth-child(3n + 1) {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 204, 168, 1) 0%,
+    rgba(255, 138, 183, 1) 100%
+  );
+}
+.card:nth-child(3n + 2) {
+  background-image: linear-gradient(
+    90deg,
+    rgba(177, 235, 254, 1) 0%,
+    rgb(92, 192, 255) 100%
+  );
+}
+.card:nth-child(3n + 3) {
+  background-image: linear-gradient(
+    90deg,
+    rgba(150, 230, 215, 1) 0%,
+    rgba(38, 231, 196, 1) 100%
+  );
+}
+
+.card {
+  display: inline-block;
+  min-width: 340px;
+  max-width: 370px;
+  width: 100%;
+
+  margin: 15px;
+  padding: 50px 40px;
+
+  font-size: 1.1em;
+
+  border-radius: 8px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+.statistic {
+  font-size: 2.1em;
+  margin-bottom: 50px;
+}
+img {
+  position: absolute;
+  left: 380px;
+}
+.card::before,
+.card::after {
+  content: "";
+  display: block;
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.3;
+  
+}
+.card::before {
+  top: -16px;
+  right: -120px;
+}
+.card::after {
+  top: 115px;
+  right: -30px;
+}
